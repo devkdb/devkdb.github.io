@@ -1,4 +1,4 @@
-# Jekyll 테마 설정
+# 기본 Jekyll 설정
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "mint"
 
@@ -7,15 +7,15 @@ title: "개발 블로그"
 name: "devkdb"
 description: "나의 개발 블로그"
 url: "https://devkdb.github.io"
-baseurl: ""  # GitHub Pages 저장소가 username.github.io 라면 baseurl이 빈 값이어야 함.
+baseurl: ""
 
-# 포스트 관련 설정
+# 포스트 설정
 collections:
   posts:
     output: true
     permalink: /:categories/:year/:month/:day/:title/
 
-# 기본 설정
+# 기본 레이아웃 설정
 defaults:
   - scope:
       path: ""
@@ -28,11 +28,7 @@ defaults:
       share: true
       related: true
 
-# Pagination 설정
-paginate: 5
-paginate_path: "/page:num/"
-
-# Plugins
+# Jekyll 플러그인
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -40,3 +36,14 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-seo-tag
+
+# Markdown 설정
+markdown: kramdown
+highlighter: rouge
+
+# Pagination 설정
+paginate: 5
+paginate_path: "/page:num/"
+
+# 빌드 오류 방지
+future: true
