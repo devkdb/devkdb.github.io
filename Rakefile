@@ -184,6 +184,10 @@ task :watch_js do
   end
 end
 
+task :serve do
+  sh "rm -rf _site && bundle exec jekyll serve"
+end
+
 task :version => ["docs/_data/theme.yml", "README.md", "docs/_pages/home.md"]
 
 file "docs/_data/theme.yml" => "package.json" do |t|
